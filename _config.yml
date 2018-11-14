@@ -1,13 +1,13 @@
-# Hexo Configuration
+﻿# Hexo Configuration
 ## Docs: https://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 呆萌钟，做一个不“纯粹”的技术人
 subtitle:
 description:
 keywords:
-author: John Doe
+author: Damien Zhong
 language:
 timezone:
 
