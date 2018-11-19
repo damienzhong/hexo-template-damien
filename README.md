@@ -39,6 +39,18 @@ npm install hexo --save
 ```
 npm i hexo-renderer-ejs hexo-renderer-less hexo-deployer-git -S
 ```
+## 修改git配置
+进入项目根目录，打开_config.yml配置文件，修改deploy配置
+repository请选择SSH方式的地址，直接复制粘贴即可。
+```
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+deploy:
+  type: git
+  repository: git@github.com:你的仓库名/你的博客项目名.git
+  branch: 你的分支名
+```
+
 ## 部署博客
 以下操作都是在Git Bash中执行
 #### 清空hexo静态文件和缓存，并重新生成
