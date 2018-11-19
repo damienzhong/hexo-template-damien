@@ -1,7 +1,7 @@
-# hexo-template-damien
-hexo-template-damien�ǻ���hexo-theme-snippet������hexo����ģ�塣
+﻿# hexo-template-damien
+hexo-template-damien是基于hexo-theme-snippet主题搭建的hexo博客模板。
 
-���������ģ���ܰ������㣬�붯����ָ [Star](https://github.com/damienzhong/damienzhong.github.io/stargazers) ֧��һ��
+如果本博客模板能帮助到你，请动动手指 [Star](https://github.com/damienzhong/damienzhong.github.io/stargazers) 支持一下
 
 ![image](https://camo.githubusercontent.com/56ff6555ec914189404da207cda4c6655e8ea55f/68747470733a2f2f7777772e7472617669732d63692e6f72672f7368656e6c6979616e672f6865786f2d7468656d652d736e69707065742e7376673f6272616e63683d6d6173746572)
 ![image](https://camo.githubusercontent.com/0e161c21509027b7970591b20c09693346c5e7bc/68747470733a2f2f696d672e736869656c64732e696f2f72656164746865646f63732f7069702f737461626c652e737667)
@@ -11,68 +11,68 @@ hexo-template-damien�ǻ���hexo-theme-snippet������hexo�
 ![image](https://camo.githubusercontent.com/9a3ed64801222d45980fb085e7e059e31314d335/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6865786f2d253345253344253230332e302d626c75652e737667)
 ![image](https://camo.githubusercontent.com/890acbdcb87868b382af9a4b1fac507b9659d9bf/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4d49542d626c75652e737667)
 
-[����Ч����ʾ](https://damienzhong.github.io/)
+[主题效果演示](https://damienzhong.github.io/)
 
 ![image](http://image.damienzhong.com/687474703a2f2f3778707732622e636f6d312e7a302e676c622e636c6f7564646e2e636f6d2f6865786f2d73696e707065742f696d672f736e69707065742d73637265656e73686f7473313030302e6a7067.jpg)
-# ����ƪ
-> ������ڴ�֮ǰʹ�õ��� Hexo 2.x �汾��Ϊ�˱���δ֪�Ĵ����뱸�ݺ����ݣ����߽����µĲ���Ŀ¼
-> "����Ŀ¼" => themes\hexo-theme-snippet, "Hexo��Ŀ¼" => ��Ŀ��Ŀ¼; "��������" => themes\hexo-theme-snippet\_config.yml, "Hexo����" => ��Ŀ��Ŀ¼��_config.yml
+# 基础篇
+> 如果你在此之前使用的是 Hexo 2.x 版本，为了避免未知的错误，请备份好数据，或者建立新的博客目录
+> "主题目录" => themes\hexo-theme-snippet, "Hexo根目录" => 项目主目录; "主题配置" => themes\hexo-theme-snippet\_config.yml, "Hexo配置" => 项目主目录下_config.yml
 
-## �����
-��ҪNode.js ������Git �����Լ� Hexo 
-## ����ģ��
-�����ַ�ʽ��ȡ������--���� *.zip �ļ���ͨ�� git��ʽ��
-### ����zip��
-���ظ�ѹ���ļ�֮��ֱ�ӽ�ѹ���ɡ�
-### Git��ʽ
+## 环境搭建
+需要Node.js 环境、Git 环境以及 Hexo 
+## 下载模板
+有两种方式获取本主题--下载 *.zip 文件和通过 git方式：
+### 下载zip包
+下载该压缩文件之后直接解压即可。
+### Git方式
 ```
 git clone https://github.com/damienzhong/hexo-template-damien.git
 ```
-## ��װ���
-������ĿĿ¼hexo-template-damien����Git Bashִ���������װ������
+## 安装插件
+进入项目目录hexo-template-damien，打开Git Bash执行如下命令安装所需插件
 
 ```
 npm install hexo --save
 ```
-�������δ��װ���߲��˽� Hexo����ο� [�ٷ��̳�](https://hexo.io/zh-cn/docs/index.html) �����˽��Լ���װ��
+如果你尚未安装或者不了解 Hexo，请参考 [官方教程](https://hexo.io/zh-cn/docs/index.html) 进行了解以及安装。
 
 ```
 npm i hexo-renderer-ejs hexo-renderer-less hexo-deployer-git -S
 ```
-## ���𲩿�
-���²���������Git Bash��ִ��
-#### ���hexo��̬�ļ��ͻ��棬����������
+## 部署博客
+以下操作都是在Git Bash中执行
+#### 清空hexo静态文件和缓存，并重新生成
 ```
-hexo clean && hexo g  //��ջ��沢���ɾ�̬�ļ�
+hexo clean && hexo g  //清空缓存并生成静态文件
 ```
-#### ����Ԥ����ȷû�������ٽ��з���
+#### 本地预览，确没有问题再进行发布
 ```
-hexo s  //������ط���Ĭ��
+hexo s  //启动本地服务默认
 ```
-#### ������github
+#### 发布到github
 ```
-hexo d ���� gulp deploy  //���𷢲�
+hexo d 或者 gulp deploy  //部署发布
 ```
-# ����ƪ
-## ��������
+# 主题篇
+## 主题配置
 
 ```
-## menu -- �����˵���ʾ{[@page:����,@url:��ַ,@icon:ͼ��]}
+## menu -- 导航菜单显示{[@page:名字,@url:地址,@icon:图标]}
 menu:
   - page: home
     url: /
     icon: fa-home
 
-## favicon -- ��վͼ��λ��{@favicon}
+## favicon -- 网站图标位置{@favicon}
 favicon: /favicon.ico
 
-## rss --rss�ļ�λ��{@rss}
+## rss --rss文件位置{@rss}
 rss: /atom.xml
 
 
-# ����С���ߵ�����
+# 各个小工具的设置
 
-## widgets -- 6�����С����{@widgets:[notification,category,archive,tagcloud,friends]}
+## widgets -- 6个左边小工具{@widgets:[notification,category,archive,tagcloud,friends]}
 widgets:
   - search
   - notification
@@ -82,12 +82,12 @@ widgets:
   - tagcloud
   - friends
 
-# ����С���ߵ�����
+# 各个小工具的设置
 
-## ����
+## 搜索
 jsonContent:
-  searchLocal: true // �Ƿ����ñ�������
-  searchGoogle: true //�Ƿ����ùȸ�����
+  searchLocal: true // 是否启用本地搜索
+  searchGoogle: true //是否启用谷歌搜索
   posts:
     title: true
     text: true
@@ -95,108 +95,108 @@ jsonContent:
     categories: false
     tags: false
 
-## notification config --��վ��������,֧�� html �� ���ı�
+## notification config --网站公告设置,支持 html 和 纯文本
 notification: |-
             <p>
-                ֧�ֱ����ͣ�<a href="https://github.com/damienzhong/damienzhong.github.io/stargazers" title="star me" target="_blank">Starһ��</a> <br/>
-                �ſᲥ����<a href="https://i.youku.com/i/UNDE3MDU5OTg3Mg==/playlists">�ſᲥ��</a><br/>
-                �Ա���װ�꣺<a href="https://shop72495432.taobao.com/search.htm?spm=a1z10.1-c.0.0.25343b46cBwhQs&search=y">DM��������</a><br/>
-                QQ����Ⱥ��<a href="https://jq.qq.com/?_wv=1027&k=5xgZ7E0" title="" target="_blank">�������Ⱥ�ġ������Ӽ�������Ⱥ��</a> 
+                支持本博客：<a href="https://github.com/damienzhong/damienzhong.github.io/stargazers" title="star me" target="_blank">Star一下</a> <br/>
+                优酷播单：<a href="https://i.youku.com/i/UNDE3MDU5OTg3Mg==/playlists">优酷播单</a><br/>
+                淘宝男装店：<a href="https://shop72495432.taobao.com/search.htm?spm=a1z10.1-c.0.0.25343b46cBwhQs&search=y">DM潮人社区</a><br/>
+                QQ交流群：<a href="https://jq.qq.com/?_wv=1027&k=5xgZ7E0" title="" target="_blank">点击加入群聊【呆萌钟技术交流群】</a> 
             </p>
 
-## �罻����{@name:�罻�������֣�@icon:�罻����ͼ�꣬@href:���ù�������} [�ο�ͼ��](http://fontawesome.io/icons/)
+## 社交设置{@name:社交工具名字，@icon:社交工具图标，@href:设置工具链接} [参考图标](http://fontawesome.io/icons/)
 social:
   - name: Github
     icon: git
     href: //github.com/damienzhong
 
-## ���·�������{@cate_config:{@show_count:�Ƿ���ʾ���֣�@show_current: �Ƿ������ǰcategory}}
+## 文章分类设置{@cate_config:{@show_count:是否显示数字，@show_current: 是否高亮当前category}}
 cate_config:
    show_count: true
    show_current: true
 
-## ���¹鵵����{@arch_config:/*�����ο���https://hexo.io/zh-cn/docs/helpers.html#list-archives*/}
-## �Ƽ���Ϸ�ʽ��[{type: 'monthly',format: 'YYYY��MM��'},{type: 'yearly',format: 'YYYY��'}]
+## 文章归档设置{@arch_config:/*参数参考：https://hexo.io/zh-cn/docs/helpers.html#list-archives*/}
+## 推荐组合方式：[{type: 'monthly',format: 'YYYY年MM月'},{type: 'yearly',format: 'YYYY年'}]
 arch_config:
    type: 'monthly'
-   format: 'YYYY��MM��'
+   format: 'YYYY年MM月'
    show_count: true
    order: -1
 
-## ��ǩ������{/*�����ο���http://www.goat1000.com/tagcanvas-options.php */}
+## 标签云设置{/*参数参考：http://www.goat1000.com/tagcanvas-options.php */}
 tagcloud:
-  tag3d: false // �Ƿ�����3D��ǩ��
-  textColour: '#444' // ������ɫ
-  outlineMethod: 'block' // ѡ��ģʽ(outline|classic|block|colour|size|none)
-  outlineColour: '#FFDAB9' // ѡ��ģʽ����ɫ
-  interval: 30 // ����֮֡���ʱ�����ֵԽ��ת������Խ��
-  freezeActive: true // ѡ�еı�ǩ�Ƿ��������
-  frontSelect: true // ��ѡ��ǩ�ƺ󲿵ı�ǩ
-  reverse: true // �Ƿ��򴥷�
-  wheelZoom: false // �Ƿ�����������
+  tag3d: false // 是否启用3D标签云
+  textColour: '#444' // 字体颜色
+  outlineMethod: 'block' // 选中模式(outline|classic|block|colour|size|none)
+  outlineColour: '#FFDAB9' // 选中模式的颜色
+  interval: 30 // 动画帧之间的时间间隔，值越大，转动幅度越大
+  freezeActive: true // 选中的标签是否继续滚动
+  frontSelect: true // 不选标签云后部的标签
+  reverse: true // 是否反向触发
+  wheelZoom: false // 是否启用鼠标滚轮
 
-## ��������{@�������ƣ����ӵ�ַ{@links:[,,,]}}
+## 友链设置{@链接名称：链接地址{@links:[,,,]}}
 links:
-  - Hexo����: https://hexo.io/zh-cn/
+  - Hexo官网: https://hexo.io/zh-cn/
 
 
-# �����Զ�����Ի�����
+# 主题自定义个性化配置
 
-## ��վ������{@branding����վ������(��������ʾ����ͼƬ)}
-branding: ��δ��˼���Ȥ
+## 网站宣传语{@branding：网站宣传语(不设置显示本地图片)}
+branding: 从未如此简单有趣
 
-## ����banner����ͼƬ{@img:imgUrl�Զ���ͼƬ��ַ,����Ĭ��{"��̬����":"banner.jpg"},{"��̬����":"banner2.jpg"}}
+## 设置banner背景图片{@img:imgUrl自定义图片地址,主题默认{"静态背景":"banner.jpg"},{"动态背景":"banner2.jpg"}}
 banner:
   img: imgUrl
 
-## ����carousel{@img:ͼƬ��ַ,@url:�����ת����(Ĭ��ֵ:"javascript:")}
+## 设置carousel{@img:图片地址,@url:点击跳转链接(默认值:"javascript:")}
 carousel:
   img: 'img/head-img.jpg'
   url: 'javascript:'
 
-## ��ҳ�б�ײ����{@homePanel: �Ƿ���}
+## 首页列表底部面板{@homePanel: 是否开启}
 homePanel: true
 
-## ��ҳ�����б�����ͼ
-### ���ع���: �Զ�����������ͼ(��Front-matter����ӵ�'img'�ֶ�) > �����ڵ�ͼƬ > defaultImgs(�����ȡ) > ��ͼģʽ�б�
+## 首页文章列表缩略图
+### 加载规则: 自定义文章缩略图(在Front-matter中添加的'img'字段) > 文章内的图片 > defaultImgs(随机获取) > 无图模式列表
 
-## �Զ������ͼƬ
+## 自定义随机图片
 defaultImgs:
-  - http://www.example.jpg //Զ��ͼƬ����ʾ��
-  - /img/default-1.jpg //����ͼƬ����ʾ��
+  - http://www.example.jpg //远程图片链接示例
+  - /img/default-1.jpg //本地图片链接示例
 
-### ����ժҪ{@ժҪ��ʾ���ȼ����Զ���ժҪ > �Զ���ȡժҪ }
-### �Զ���ժҪ��Χ{@<!--more-->:��ȡmore֮ǰ������ΪժҪ}
-### �Զ���ȡժҪ{@excerptLength:�Զ���ȡ����ǰ���ٸ���ΪժҪ��������Ĭ�ϣ�120��}
+### 文章摘要{@摘要显示优先级：自定义摘要 > 自动截取摘要 }
+### 自定义摘要范围{@<!--more-->:截取more之前的内容为摘要}
+### 自动截取摘要{@excerptLength:自动截取文章前多少个字为摘要，不配置默认：120字}
 excerptLength: 120
 
-## �Ƿ�������Ŀ¼
+## 是否开启文章目录
 toc: true
 
-## �����������{@highlightTheme: ��������,(������ʱ�����ã����������С�)}
+## 代码高亮配置{@highlightTheme: 主题名称,(配置暂时不可用，后续开发中…)}
 
 highlightTheme: default //TODO
 
-## ���¹������ѹ��� {@warning:{days:�ٽ�����(Ĭ��300��,����0�رչ���),text:��������/*%dΪ����������ռλ��*/}}
+## 文章过期提醒功能 {@warning:{days:临界天数(默认300天,设置0关闭功能),text:提醒文字/*%d为过期总天数占位符*/}}
 warning:
   days: 300
-  text: '������%d��֮ǰ������������ݿ����Ѿ���ʱ��'
+  text: '本文于%d天之前发表，文中内容可能已经过时。'
 
-## ����������{@declaration: {enable:�Ƿ���,title:��������,tip:��ʾ����}}
+## 文章内声明{@declaration: {enable:是否开启,title:声明标题,tip:提示内容}}
 declaration:
   enable: true
-  title: 'ת������'
+  title: '转载声明'
   tip: |-
-      ��ҵת������ϵ���߻����Ȩ,����ҵת����ע������ ? <a href="" target="_blank">������</a>
+      商业转载请联系作者获得授权,非商业转载请注明出处 © <a href="" target="_blank">呆萌钟</a>
 
-## ���´���{@reward: {alipay:֧��������,wepay:΢�Ŵ���,tip:������ʾ��; ���Ӷ�Ϊ��,�رմ��͹���}}
+## 文章打赏{@reward: {alipay:支付宝打赏,wepay:微信打赏,tip:打赏提示语; 链接都为空,关闭打赏功能}}
 reward:
   alipay: ''
   wepay: '../img/reward-wepay.jpg'
-  tip: �����ǲ�ˣ��å�Ĺ���
+  tip: 赞赏是不耍流氓的鼓励
 
 
-## ��������
+## 主题评论
 
 ### gitment
 gitment:
@@ -209,91 +209,91 @@ gitment:
   perPage:
   maxCommentHeight:
 
-### ������(Ĭ��ѡ��)
+### 来必力(默认选项)
 livere:
   enable: true
   livere_uid:
 
-### ��������(�����ȶ��������޷�����)
+### 友言评论(服务不稳定，经常无法加载)
 uyan:
   enable: false
   uyan_id:
 
-### Disqus����(��Ҫ��ǽ�����ߴ����)
+### Disqus评论(需要翻墙，或者搭建代理)
 disqus:
   enable: false
   shortname: snippet
   count: false
 
-### ��������(��ҪICP����)
+### 畅言评论(需要ICP备案)
 changyan:
   enable: false
   appid:
   conf:
 
-### Valine���� �ο���վ: [valine����](https://valine.js.org/)
+### Valine评论 参考网站: [valine评论](https://valine.js.org/)
 valine:
   enable: true
   appId:
   appKey:
-  placeholder: ˵��ʲô��
-  notify: false // �ʼ�֪ͨ
-  verify: false // ��֤��
-  avatar: mm // avatarͷ��
-  meta: nick,mail // ��������ݣ���ѡֵnick,mail,link
+  placeholder: 说点什么吧
+  notify: false // 邮件通知
+  verify: false // 验证码
+  avatar: mm // avatar头像
+  meta: nick,mail // 输入框内容，可选值nick,mail,link
   pageSize: 10
 
-## ��վ�ÿ�ͳ�� [������ͳ��](http://busuanzi.ibruce.info/)
+## 网站访客统计 [不蒜子统计](http://busuanzi.ibruce.info/)
 visit_counter:
-   site: true // �ܷ������ͷ�������ͳ��
-   page: true // �����Ķ���ͳ��
+   site: true // 总访问量和访问人数统计
+   page: true // 文章阅读量统计
 
-## ��վ����ͳ��
+## 网站访问统计
 
-### ����CNZZͳ�� �ο���վ: [����CNZZ](http://www.umeng.com/)
+### 网盟CNZZ统计 参考网站: [网盟CNZZ](http://www.umeng.com/)
 cnzz_anaylytics:
 
-### �ٶ�ͳ�� �ο���վ: [�ٶ�ͳ��](https://tongji.baidu.com/)
+### 百度统计 参考网站: [百度统计](https://tongji.baidu.com/)
 baidu_anaylytics:
 
-### �ȸ�ͳ�� �ο���վ��[�ȸ�ͳ��](https://www.google-analytics.com/)
+### 谷歌统计 参考网站：[谷歌统计](https://www.google-analytics.com/)
 google_anaylytics:
 
-### ��Ѷ���� �ο���վ��[��Ѷ����](http://ta.qq.com/)
+### 腾讯分析 参考网站：[腾讯分析](http://ta.qq.com/)
 tencent_analytics:
 
-### �ٶ�վ����֤
+### 百度站点认证
 baidu-site-verification:
 
-### �ٶ��Զ�����(@baidu_push: �Ƿ����ðٶ��Զ�����)  �ο���վ: [�ٶ�վ����Դ](https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title18)
+### 百度自动推送(@baidu_push: 是否启用百度自动推送)  参考网站: [百度站长资源](https://ziyuan.baidu.com/college/courseinfo?id=267&page=2#h2_article_title18)
 baidu_push:
 
-## ICON���� (���������ñ���Font Icon)
+## ICON配置 (不配则启用本地Font Icon)
 fontAwesome: //cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css
 
-## ��վ��������
-since: 2017  //��վʱ��
-robot: 'all'  //�������������ץȡ������������Ϊ��Ĭ��Ϊall
-version: 1.2.1  //��ǰ����汾��
+## 网站主题配置
+since: 2017  //建站时间
+robot: 'all'  //控制搜索引擎的抓取和索引编制行为，默认为all
+version: 1.2.1  //当前主题版本号
 ```
-## ʹ�ü��ɼ�������չ
-1.�޸���������Front-matterģ��,�޸�scaffoldsĿ¼�µ�post.mdģ��
-> ģ���ļ��ڲ���Ҫ����ע�Ͳ���,�ؼ��ʺ�����ʹ��Ӣ��ð��
+## 使用技巧及功能扩展
+1.修改新增文章Front-matter模板,修改scaffolds目录下的post.md模板
+> 模板文件内部不要保留注释部分,关键词后面请使用英文冒号
 
 ```
  ---
-  title: {{ title }} // ����
-  date: {{ date }}   // ʱ��
-  categories: ['����1','����2'] // ����
-  tags: ['��ǩ1','��ǩ2']       // ��ǩ
-  comments: false    // �Ƿ�������
-  img:               // �Զ�������ͼ
+  title: {{ title }} // 标题
+  date: {{ date }}   // 时间
+  categories: ['分类1','分类2'] // 分类
+  tags: ['标签1','标签2']       // 标签
+  comments: false    // 是否开启评论
+  img:               // 自定义缩略图
   ---
 ```
-2.����վ�ڱ�����������
-���Ҫʹ�ñ���վ�����������밲װ���hexo-generator-json-content��������������json�ļ�
+2.启用站内本地搜索功能
+如果要使用本地站点搜索，必须安装插件hexo-generator-json-content来创建本地搜索json文件
 
 ```
 npm i hexo-generator-json-content@2.2.0 -S
 ```
-Ȼ���޸���������_config.yml�ļ���jsonContent��ز�����
+然后修改主题配置_config.yml文件下jsonContent相关参数。
