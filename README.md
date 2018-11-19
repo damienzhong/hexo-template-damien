@@ -52,7 +52,7 @@ deploy:
 ```
 
 ## 部署博客
-以下操作都是在Git Bash中执行
+以下操作都是在Git Bash中执行，在生成以及部署文章之前，需要安装一个扩展：npm install hexo-deployer-git --save 
 #### 清空hexo静态文件和缓存，并重新生成
 ```
 hexo clean && hexo g  //清空缓存并生成静态文件
