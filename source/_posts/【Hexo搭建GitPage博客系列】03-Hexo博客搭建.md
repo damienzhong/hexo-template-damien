@@ -1,7 +1,9 @@
 ---
 title: 【Hexo搭建GitPage博客系列】03.Hexo博客搭建
 date: 2018-11-19 21:43:36
-tags: 博客搭建
+tags: 
+	- Hexo
+	- 博客搭建
 categories: blog
 ---
 # 前言
